@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build:  
     docker:
       - image: circleci/node:8.12.0
 
@@ -34,9 +34,9 @@ jobs:
       enabled: true
     steps:
       - run:
-        name: Deploy to in1t.com
-        command: |
-          ssh $SSH_USER@$SSH_HOST "deploy"
+          name: Deploy to in1t.com
+          command: |
+            ssh $SSH_USER@$SSH_HOST "deploy"
 
 workflows:
   version: 2
