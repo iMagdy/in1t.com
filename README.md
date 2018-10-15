@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/iMagdy/in1t.com.svg?style=svg)](https://circleci.com/gh/iMagdy/in1t.com)s  
+
 ### In1t.com Website
 This repository hosts https://in1t.com website.
 
