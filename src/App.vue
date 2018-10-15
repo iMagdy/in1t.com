@@ -6,17 +6,11 @@
           <SideNavigation />
         </el-col>
         <el-col :xs="24" :span="20">
-          <!-- <el-header>
-            <h1>
-              Islam Magdy <br />
-              <small>Senior Full Stack Developer</small>
-            </h1>
-          </el-header> -->
           <el-main>
             <router-view/>
           </el-main>
           <el-footer>
-            2018-present &copy; - <a href="https://github/iMagdy">open source</a>
+            2018-present &copy; - <a href="https://github.com/iMagdy/in1t.com">open source</a>
           </el-footer>
         </el-col>
       </el-row>
