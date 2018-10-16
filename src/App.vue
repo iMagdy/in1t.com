@@ -2,7 +2,7 @@
   <div id="app">
     <el-container>
       <el-row>
-        <el-col :xs="4" :span="4" class="hidden-sm-and-down">
+        <el-col :span="4" class="hidden-sm-and-down">
           <SideNavigation />
         </el-col>
         <el-col :xs="24" :span="20">
@@ -10,7 +10,7 @@
             <router-view/>
           </el-main>
           <el-footer>
-            2018-present &copy; - <a href="https://github.com/iMagdy/in1t.com">open source</a>
+            <Footer />
           </el-footer>
         </el-col>
       </el-row>
@@ -20,10 +20,12 @@
 
 <script>
 import SideNavigation from '@/components/SideNavigation.vue';
+import Footer from '@/components/Footer.vue';
 export default {
   name: 'App',
   components: {
     SideNavigation,
+    Footer,
   },
 }
 </script>
