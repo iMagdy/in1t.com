@@ -5,4 +5,5 @@ Backend:
   ☐ Add SSR.
 
 CI/CD:
-  ☐ Integrate with Travis CI.
+  ✔ Integrate with Circle CI. (Build) @done(18-10-17 00:34)
+  ☐ Integrate with Circle CI. (Deployment)
