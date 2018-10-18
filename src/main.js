@@ -4,10 +4,11 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
-
-Vue.config.productionTip = false;
+import pkg from '../package.json';
 
 Vue.use(Element, { size: 'small' });
+
+Vue.prototype.$appName = pkg.name;
 
 new Vue({
   router,
