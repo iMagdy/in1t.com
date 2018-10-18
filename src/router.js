@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Resume from './views/Resume.vue';
-import Contact from './views/Contact.vue';
+import Home from '@/views/View.Home.vue';
+import Resume from '@/views/View.Resume.vue';
+import Contact from '@/views/View.Contact.vue';
 
 Vue.use(Router);
 
