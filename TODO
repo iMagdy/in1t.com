@@ -1,7 +1,9 @@
 Front end:
+  ✔ Organize files structure, & cleaning up @done(18-10-18 13:22)
   ☐ Complete unit and e2e tests.
 
 Backend:
+  ☐ Dockerize
   ☐ Add SSR.
 
 CI/CD:
