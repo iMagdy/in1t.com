@@ -1,0 +1,47 @@
+{
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "workbench.colorTheme": "Material Theme",
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "npm.enableScriptExplorer": true,
+  "gitlens.historyExplorer.enabled": true,
+  "editor.tabSize": 2,
+  "git.enableSmartCommit": true,
+  "gitlens.gitExplorer.files.layout": "auto",
+  "window.zoomLevel": 0,
+  "breadcrumbs.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+  "javascript.validate.enable": false,
+  "todo-tree.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "todo-tree.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.nativeTabs": true,
+  "window.titleBarStyle": "native",
+  "window.restoreWindows": "all",
+  "window.title": "${dirty} ${activeEditorShort}${separator}${rootName}",
+  "window.newWindowDimensions": "maximized",
+  "window.openFilesInNewWindow": "default",
+  "todo.embedded.provider": "ag",
+  "git.rebaseWhenSync": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "vue"
+  ]
+}
