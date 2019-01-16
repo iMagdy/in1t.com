@@ -38,7 +38,7 @@
   export default {
     name: 'Resume',
     data: () => ({
-      loading: true
+      loading: false
     }),
     methods: {
       downloadResume: () => {
