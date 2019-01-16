@@ -1,7 +1,9 @@
-const pkg = require('../package')
+const pkg = require('../package.json')
 const resolve = require('path').resolve
 
 module.exports = {
+globalName: pkg.name,
+
   mode: 'universal',
 
   srcDir: resolve(__dirname, '..', 'resources'),
@@ -10,7 +12,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: pkg.author,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -33,7 +35,6 @@ module.exports = {
     '~assets/css/main.scss',
     'element-ui/packages/theme-chalk/src/index.scss',
     'element-ui/packages/theme-chalk/src/display.scss'
-    // 'element-ui/lib/theme-chalk/index.css'
   ],
 
   /*
@@ -66,6 +67,22 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+
+  render: {
+    http2: {
+      pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
+        .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+        .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+    },
+    resourceHints: true
+  },
+
+  vue: {
+    config: {
+      productionTip: process.env.NODE_ENV !== 'production',
+      devtools: process.env.NODE_ENV !== 'production'
     }
   }
 }
