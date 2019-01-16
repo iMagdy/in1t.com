@@ -4,21 +4,26 @@
       <el-container>
         <el-row>
           <el-col
+            :xs="24"
             :span="4"
-            class="hidden-sm-and-down"
           >
             <SideNavigation />
           </el-col>
+
           <el-col
             :xs="24"
             :span="20">
+            
             <el-main>
               <nuxt/>
             </el-main>
+            
             <el-footer>
               <Footer />
             </el-footer>
+
           </el-col>
+
         </el-row>
       </el-container>
     </div>

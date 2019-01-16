@@ -4,10 +4,10 @@
       type="flex"
       justify="space-between"
       align="middle">
-      <el-col :span="4">
+      <el-col :span="4" :xs="12">
         <h1>Resumé</h1>
       </el-col>
-      <el-col :span="2">
+      <el-col :span="2" :xs="12">
         <el-button
           type="primary"
           @click="downloadResume">
@@ -18,7 +18,7 @@
     </el-row>
     <el-row>
       <el-col>
-        <el-alerta
+        <el-alert
           class="info-alert"
           title="Loading PDF resume below"
           type="info"

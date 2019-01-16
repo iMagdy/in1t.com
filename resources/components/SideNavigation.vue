@@ -3,7 +3,7 @@
     :router="true"
     default-active="2"
     class="side-menu">
-    <el-row>
+    <el-row class="header">
       <el-col :span="24">
         <img class="avatar" src="../assets/img/avatar.jpg" />
       </el-col>
@@ -38,10 +38,19 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~assets/css/mixins';
+
   .avatar {
     width: 70%;
     border-radius: 50%;
     margin: 20px;
+    @include respondTo(smartphone) {
+      width: 21vw;
+      margin: 0;
+      position: absolute;
+      top: 18px;
+      left: 13px;
+    }
   }
 
   .side-menu {
@@ -53,6 +62,18 @@
         color: #1F5DD3;
         text-decoration: none;
       }
+      @include respondTo(smartphone) {
+        display: inline;
+      }
+    }
+    @include respondTo(smartphone) {
+      min-height: auto;
+    }
+  }
+
+  .header {
+    @include respondTo(smartphone) {
+      padding: 20px 20px 0 20px;
     }
   }
 
@@ -66,6 +87,10 @@
     small {
       display: block;
       font-size: 11px;
+    }
+    @include respondTo(smartphone) {
+      padding-left: 23vw;
+      border-radius: 30px;
     }
   }
 </style>

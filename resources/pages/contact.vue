@@ -1,12 +1,16 @@
 <template>
   <div class="resume page">
     <el-row type="flex" justify="space-between" align="middle" class="page-title">
-      <h1>Get in touch</h1>
-      <p>
-        <small>
-          Currently open for contracting or full-time remote offers
-        </small>
-      </p>
+      <el-col :span="20" :xs="12">
+        <h1>Get in touch</h1>
+      </el-col>
+      <el-col :span="4" :xs="12">
+        <p>
+          <small>
+            Currently open for contracting or full-time remote offers
+          </small>
+        </p>
+      </el-col>
     </el-row>
     <el-row>
       <p>
