@@ -27,8 +27,7 @@ module.exports = {
     | }
     |
     */
-    directives: {
-    },
+    directives: {},
     /*
     |--------------------------------------------------------------------------
     | Report only
@@ -49,7 +48,7 @@ module.exports = {
     | headers, unless you want them to be set.
     |
     */
-    setAllHeaders: false,
+    setAllHeaders: true,
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +94,7 @@ module.exports = {
   |
   | Learn more at https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   */
-  xframe: 'DENY',
+  xframe: 'SAMEORIGIN',
 
   /*
   |--------------------------------------------------------------------------
