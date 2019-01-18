@@ -1,3 +1,4 @@
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const pkg = require('../package.json')
 const resolve = require('path').resolve
 
@@ -32,7 +33,7 @@ globalName: pkg.name,
   ** Global CSS
   */
   css: [
-    '~assets/css/main.scss',
+    '@/assets/css/main.scss',
     'element-ui/packages/theme-chalk/src/index.scss',
     'element-ui/packages/theme-chalk/src/display.scss'
   ],
@@ -41,7 +42,9 @@ globalName: pkg.name,
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/analytics',
+    '@/plugins/element-ui',
+    '@/plugins/service-worker'
   ],
 
   /*
@@ -67,7 +70,12 @@ globalName: pkg.name,
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    plugins: [
+      new WorkboxPlugin.InjectManifest({
+        swSrc: 'public/worker.js',
+      })
+    ]
   },
 
   render: {
