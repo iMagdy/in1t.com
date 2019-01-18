@@ -15,23 +15,46 @@
     <el-row>
       <p>
         <strong>Email: </strong>
-        <a href="mailto:i.magdy.m@gmail.com">i.magdy.m@gmail.com</a> |
-        <a href="mailto:islam@in1t.com">islam@in1t.com</a>
+        <a href="mailto:i.magdy.m@gmail.com" @click="usedEmail">i.magdy.m@gmail.com</a> |
+        <a href="mailto:islam@in1t.com" @click="usedEmail">islam@in1t.com</a>
       </p>
       <p>
         <strong>Github: </strong>
-        <a href="https://github.com/iMagdy">https://github.com/iMagdy</a>
+        <a href="https://github.com/iMagdy" @click="usedGithub">https://github.com/iMagdy</a>
       </p>
       <p>
         <strong>LinkedIn: </strong>
-        <a href="https://www.linkedin.com/in/imagdy/">https://www.linkedin.com/in/imagdy/</a>
+        <a href="https://www.linkedin.com/in/imagdy/" @click="usedLinkedIn">https://www.linkedin.com/in/imagdy/</a>
+      </p>
+      <p>
+        <strong>Call: </strong>
+        <a href="tel://+201148956422" @click="usedPhone">+20 114 895 64 22</a>
       </p>
     </el-row>
   </div>
 </template>
 
 <script>
-  export default { name: 'Contact' }
+  export default {
+    name: 'Contact',
+    methods: {
+      track () {
+        this.$ga.page('/contact')
+      },
+      usedEmail() {
+        this.$ga.event('contact', 'method', 'email', 10)
+      },
+      usedGithub() {
+        this.$ga.event('contact', 'method', 'github', 10)
+      },
+      usedLinkedIn() {
+        this.$ga.event('contact', 'method', 'linkedin', 10)
+      },
+      usedPhone() {
+        this.$ga.event('contact', 'method', 'phone', 10)
+      },
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

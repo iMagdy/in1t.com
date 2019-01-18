@@ -16,7 +16,12 @@
 
   export default {
     name: 'Home',
-    data: () => ({ ...HomeData })
+    data: () => ({ ...HomeData }),
+    methods: {
+      track () {
+        this.$ga.page('/')
+      }
+    }
   }
 </script>
 

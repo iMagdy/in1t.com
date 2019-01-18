@@ -42,10 +42,14 @@
     }),
     methods: {
       downloadResume: () => {
+        this.$ga.event('more-info', 'resume', 'resume-download', 10)
         const a = document.createElement('a')
         a.href = '/Islam-Magdy-Resume.pdf'
         a.download = 'Islam-Magdy-Resume.pdf'
         a.click()
+      },
+      track () {
+        this.$ga.page('/resume')
       }
     },
     head () {
