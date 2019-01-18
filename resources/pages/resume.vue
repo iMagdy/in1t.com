@@ -41,7 +41,7 @@
       loading: false
     }),
     methods: {
-      downloadResume: () => {
+      downloadResume() {
         this.$ga.event('more-info', 'resume', 'resume-download', 10)
         const a = document.createElement('a')
         a.href = '/Islam-Magdy-Resume.pdf'
