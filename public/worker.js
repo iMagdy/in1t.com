@@ -21,28 +21,28 @@ if (workbox) {
   })
   
   // cache CSS and JS
-  workbox.routing.registerRoute(/\.(?:js|css)$/, workbox.strategies.staleWhileRevalidate({
-      cacheName: 'in1t-static-resources',
-      plugins: [ cacheDuration ]
-    })
-  )
+  // workbox.routing.registerRoute(/\.(?:js|css)$/, workbox.strategies.staleWhileRevalidate({
+  //     cacheName: 'static-resources',
+  //     plugins: [ cacheDuration ]
+  //   })
+  // )
 
   // Cache image files
   workbox.routing.registerRoute(/.*\.(?:png|jpg|jpeg|svg|gif)/, workbox.strategies.cacheFirst({
-      cacheName: 'in1t-images-cache',
+      cacheName: 'images-cache',
       plugins: [ cacheDuration ]
     })
   )
   
   // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
   workbox.routing.registerRoute(/^https:\/\/fonts\.googleapis\.com/, workbox.strategies.staleWhileRevalidate({
-      cacheName: 'in1t-google-fonts-stylesheets',
+      cacheName: 'google-fonts-stylesheets',
     })
   )
 
   // Cache the underlying font files with a cache-first strategy for 1 year.
   workbox.routing.registerRoute(/^https:\/\/fonts\.gstatic\.com/, workbox.strategies.cacheFirst({
-      cacheName: 'in1t-google-fonts-webfonts',
+      cacheName: 'google-fonts-webfonts',
       plugins: [
         new workbox.cacheableResponse.Plugin({
           statuses: [0, 200],
