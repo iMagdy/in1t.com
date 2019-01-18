@@ -14,5 +14,8 @@
 */
 
 const Route = use('Route')
+const API_BASE_URL = '/api'
+
+Route.get(`${API_BASE_URL}/rates`, 'CurrencyController.rate')
 
 Route.any('*', 'NuxtController.render')
