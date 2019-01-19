@@ -1,6 +1,6 @@
 <template>
   <footer>
-    &copy; 1988 - {{ currentYear }} In1t. <a target="_blank" href="https://github.com/iMagdy/in1t.com">open sourced</a>
+    1988 - {{ currentYear }} In1t. <a target="_blank" href="https://github.com/iMagdy/in1t.com">open sourced</a>
   </footer>
 </template>
 
