@@ -7,6 +7,9 @@ export default () => {
     id: 'UA-44383953-6',
     autoTracking: {
       screenview: true
+    },
+    debug: {
+      sendHitTask: process.env.NODE_ENV === 'production'
     }
   })
 }

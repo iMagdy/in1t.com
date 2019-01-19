@@ -27,7 +27,8 @@
     "element-ui": "^2.4.6",
     "got": "^9.6.0",
     "nuxt": "^2.0.0",
-    "vue-analytics": "^5.16.2"
+    "vue-analytics": "^5.16.2",
+    "vue-gtm": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

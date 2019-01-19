@@ -43,6 +43,7 @@ globalName: pkg.name,
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/gtm',
     '@/plugins/analytics',
     '@/plugins/element-ui',
     '@/plugins/service-worker'
