@@ -9,8 +9,8 @@
       </el-col>
       <el-col :span="24">
         <h1 class="title">
-          Islam Magdy
-          <small>senior full stack engineer</small>
+          {{ $t('globals.author') }}
+          <small>{{ $t('globals.title') }}</small>
         </h1>
       </el-col>
     </el-row>
@@ -18,15 +18,15 @@
       class="nav-item"
       index="/">
       <i class="el-icon-more" />
-      <span>About</span>
+      <span>{{ $t('links.about') }}</span>
     </el-menu-item>
     <el-menu-item class="nav-item" index="/resume">
       <i class="el-icon-document" />
-      <span>Resume</span>
+      <span>{{ $t('links.resume') }}</span>
     </el-menu-item>
     <el-menu-item class="nav-item" index="/contact">
       <i class="el-icon-message" />
-      <span>Contact</span>
+      <span>{{ $t('links.contact') }}</span>
     </el-menu-item>
   </el-menu>
 </template>
@@ -91,6 +91,15 @@
     @include respondTo(smartphone) {
       padding-left: 23vw;
       border-radius: 30px;
+    }
+  }
+  
+  .rtl {
+    .title, .nav-item {
+      text-align: right;
+    }
+    .side-menu {
+      padding-right: 0;
     }
   }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="home page">
-    <h1>Pretty Brief</h1>
-    <p>{{ intro }}</p>
-    <h1>Should you prefer bullets</h1>
+    <h1>{{ $t('home.title') }}</h1>
+    <p>{{ $t('home.introduction') }}</p>
+    <h1>{{ $t('home.listTitle') }}</h1>
     <ul>
-      <li v-for="item in bullets" :key="item" class="text item">
+      <li v-for="item in $t('home.list')" :key="item" class="text item">
         {{ item }}
       </li>
     </ul>
@@ -12,14 +12,17 @@
 </template>
 
 <script>
-  import HomeData from '../assets/data.home.json'
 
   export default {
     name: 'Home',
-    data: () => ({ ...HomeData }),
     methods: {
       track () {
         this.$ga.page('/')
+      }
+    },
+    head () {
+      return {
+        title: `${this.$t('globals.author')} - ${this.$t('globals.title')}`
       }
     }
   }
@@ -38,6 +41,12 @@
     padding: 0 0 0 20px;
     li {
       margin-bottom: 10px;
+    }
+  }
+  .rtl {
+    h1, p, ul, li {
+      direction: rtl;
+      text-align: right;
     }
   }
 </style>

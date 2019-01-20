@@ -30,6 +30,10 @@ globalName: pkg.name,
   */
   loading: { color: '#fff' },
 
+  router: {
+    middleware: 'i18n'
+  },
+
   /*
   ** Global CSS
   */
@@ -43,6 +47,7 @@ globalName: pkg.name,
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/locale',
     '@/plugins/gtm',
     '@/plugins/analytics',
     '@/plugins/element-ui',

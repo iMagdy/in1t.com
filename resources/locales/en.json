@@ -1,0 +1,44 @@
+{
+  "globals": {
+    "author": "Islam Magdy",
+    "title": "Senior Full Stack Developer"
+  },
+  "links": {
+    "about": "About",
+    "resume": "Resumé",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "This is your first time here!",
+    "subtitle": "Nice to meet you :)",
+    "introduction": "I've worked on multiple large projects; Real-time, interactive educational platforms, artificial intelligence-Assisted apps, world-class e-commerce websites, to mobile apps that utilizes geospatial technologies to connect drivers with riders, and much more",
+    "listTitle": "Should you prefer bullets",
+    "list": [
+      "I've worked on multiple large projects, like Real-time, interactive educational platform. Artificial Intelligence-Assisted customer support system, to mobile apps that use geospatial technologies to connect drivers with riders,.. etc",
+      "Skilled in application development utilizing cutting edge technologies including Node.js, MongoDB, React and React Native.",
+      "Highly skilled with Meteor js.",
+      "Strong architecture experience designing and scaling distributed systems using Microservices with Docker/Docker Swarm.",
+      "Experience building message/event-driven microservices using RabbitMQ",
+      "Currently learning Postgres & Kubernetes.",
+      "Welling to learn more on Ruby, Go, Consul, Nomad, Terraform, Zookeeper, and other frameworks. ",
+      "Well versed with various protocols including HTTP/S, WS/S, and DDP.",
+      "Strong advocate for Unit, Integration, and End-to-End testing with 100% coverage in addition to building CI/CD automation pipelines. ",
+      "Experience working with large scale e-commerce systems.",
+      "Experience working with legacy systems."
+    ]
+  },
+  "resume": {
+    "title": "Resumé",
+    "download": "Download",
+    "notificationTitle": "Loading PDF resume below",
+    "notificationDescription": "In some cases where your browser is too old or connection speed is slow, the PDF preview below may fail to load. If this is the case, please click the download button above"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "introduction": "I'm currently open for contracting or full-time remote offers",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "call": "Call"
+  }
+}

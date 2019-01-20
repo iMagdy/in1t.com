@@ -38,7 +38,10 @@ export default {
   name: 'DefaultLayout',
   head () {
     return {
-      title: `Islam Magdy - Senior Full Stack Engineer`
+      title: `${this.$t('globals.author')} - ${this.$t('globals.title')}`,
+      bodyAttrs: {
+        class: this.$i18n.locale === 'ar' ? 'rtl' : 'ltr'
+      }
     }
   },
   components: {
