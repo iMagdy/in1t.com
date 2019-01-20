@@ -17,11 +17,6 @@
             <el-main>
               <nuxt/>
             </el-main>
-            
-            <el-footer>
-              <Footer />
-            </el-footer>
-
           </el-col>
 
         </el-row>
@@ -31,7 +26,6 @@
 </template>
 
 <script>
-import Footer from '~/components/Footer.vue'
 import SideNavigation from '~/components/SideNavigation.vue'
 
 export default {
@@ -45,7 +39,6 @@ export default {
     }
   },
   components: {
-    Footer,
     SideNavigation
   }
 }

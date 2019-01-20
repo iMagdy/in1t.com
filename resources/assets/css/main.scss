@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC');
+
 $--color-primary: #1F5DD3;
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
-
 .rtl {
   direction: rtl;
   text-align: right;
@@ -11,12 +12,31 @@ body {
 }
 
 #app {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Noto Serif SC', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #F0F0F7;
+  background: #fff;
   min-height: 100vh;
   min-width: 100vw;
+
+  a:visited {
+    color: #2c3e50;
+  }
+
+  .el-main {
+    padding: 0;
+  }
+
+  .page {
+    min-height: 90vh;
+    background: #fff;
+    text-align: left;
+    padding: 7px 30px;
+  }
+
+  .el-footer {
+    background: #f7f7f7;
+  }
 }

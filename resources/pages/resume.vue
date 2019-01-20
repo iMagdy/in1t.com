@@ -59,12 +59,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .page {
-    background: #fff;
-    text-align: left;
-    padding: 7px 30px;
-    min-height: 60vh;
-  }
 
   .info-alert {
     margin-bottom: 20px;

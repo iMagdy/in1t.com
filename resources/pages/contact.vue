@@ -63,13 +63,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .page {
-    background: #fff;
-    text-align: left;
-    padding: 7px 30px;
-    min-height: 60vh;
-  }
-
   .page-title {
     border-bottom: 1px solid #2c3e50;
   }
