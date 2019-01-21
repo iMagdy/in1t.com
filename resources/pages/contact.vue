@@ -38,9 +38,6 @@
   export default {
     name: 'Contact',
     methods: {
-      track () {
-        this.$ga.page('/contact')
-      },
       usedEmail() {
         this.$ga.event('contact', 'method', 'email', 10)
       },

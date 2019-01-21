@@ -48,8 +48,6 @@ globalName: pkg.name,
   */
   plugins: [
     '@/plugins/locale',
-    '@/plugins/gtm',
-    '@/plugins/analytics',
     '@/plugins/element-ui',
     '@/plugins/service-worker'
   ],

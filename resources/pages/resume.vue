@@ -45,9 +45,6 @@
         a.href = '/Islam-Magdy-Resume.pdf'
         a.download = 'Islam-Magdy-Resume.pdf'
         a.click()
-      },
-      track () {
-        this.$ga.page('/resume')
       }
     },
     head () {

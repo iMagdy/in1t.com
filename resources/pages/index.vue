@@ -33,11 +33,6 @@
 
   export default {
     name: 'Home',
-    methods: {
-      track () {
-        this.$ga.page('/')
-      }
-    },
     head () {
       return {
         title: `${this.$t('globals.author')} - ${this.$t('globals.title')}`
