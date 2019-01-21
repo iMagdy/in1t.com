@@ -39,16 +39,40 @@
     name: 'Contact',
     methods: {
       usedEmail() {
-        this.$ga.event('contact', 'method', 'email', 10)
+        dataLayer.push({
+          category: 'Interaction', 
+          action: 'contact', 
+          label: 'email', 
+          value: 100, 
+          event: 'contact_action'
+        });
       },
       usedGithub() {
-        this.$ga.event('contact', 'method', 'github', 10)
+        dataLayer.push({
+          category: 'Interaction', 
+          action: 'contact', 
+          label: 'github', 
+          value: 100, 
+          event: 'contact_action'
+        });
       },
       usedLinkedIn() {
-        this.$ga.event('contact', 'method', 'linkedin', 10)
+        dataLayer.push({
+          category: 'Interaction', 
+          action: 'contact', 
+          label: 'linkedIn', 
+          value: 100, 
+          event: 'contact_action'
+        });
       },
       usedPhone() {
-        this.$ga.event('contact', 'method', 'phone', 10)
+        dataLayer.push({
+          category: 'Interaction', 
+          action: 'contact', 
+          label: 'phone', 
+          value: 100, 
+          event: 'contact_action'
+        });
       },
     },
     head () {

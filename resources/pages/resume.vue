@@ -40,7 +40,13 @@
     }),
     methods: {
       downloadResume() {
-        this.$ga.event('more-info', 'resume', 'resume-download', 10)
+        dataLayer.push({
+          category: 'Interaction', 
+          action: 'download', 
+          label: 'resume', 
+          value: 100, 
+          event: 'download_resume'
+        });
         const a = document.createElement('a')
         a.href = '/Islam-Magdy-Resume.pdf'
         a.download = 'Islam-Magdy-Resume.pdf'
