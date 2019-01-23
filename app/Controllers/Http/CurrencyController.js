@@ -8,7 +8,7 @@ class CurrencyController {
     try {
       const CURRENCY_API_KEY = Env.get('CURRENCY_API_KEY')
       const response = await got(
-        `https://openexchangerates.org/apix/latest.json?app_id=${CURRENCY_API_KEY}&symbols=egp&show_alternative=true`, 
+        `https://openexchangerates.org/api/latest.json?app_id=${CURRENCY_API_KEY}&symbols=egp&show_alternative=true`, 
         {
           json: true
         }

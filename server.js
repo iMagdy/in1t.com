@@ -18,10 +18,25 @@
 */
 
 const { Ignitor } = require('@adonisjs/ignitor')
+const path = require('path')
+const http2 = require('http2')
+const fs = require('fs')
+
+
+// Certificate
+const options = {
+  key: fs.readFileSync(path.join(__dirname, 'certs/localhost.key')),
+  cert: fs.readFileSync(path.join(__dirname, 'certs/localhost.crt'))
+}
 
 new Ignitor(require('@adonisjs/fold'))
-  .appRoot(__dirname)
-  .fireHttpServer(() => {
+.appRoot(__dirname)
+.fireHttpServer((handler) => {
+    const Env = use('Env')
     use('App/Controllers/Http/NuxtController')
+    if (Env.get('FAKE_SSL')) {
+      return http2.createSecureServer(options, handler)
+    }
+    return http2.createServer(options, handler)
   })
   .catch(console.error)

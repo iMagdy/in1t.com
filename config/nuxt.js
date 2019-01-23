@@ -1,6 +1,7 @@
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const pkg = require('../package.json')
 const resolve = require('path').resolve
+const fs = require('fs')
 
 module.exports = {
 globalName: pkg.name,

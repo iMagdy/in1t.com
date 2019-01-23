@@ -77,5 +77,5 @@ dist
 # Serverless directories
 .serverless
 
-# IDE
-.idea
+# Local certificates
+certs

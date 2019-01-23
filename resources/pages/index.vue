@@ -3,12 +3,12 @@
     <h2>{{ $t('home.title') }}</h2>
     <p>{{ $t('home.introduction') }}</p>
     <p>
-      Examples: <a target="_blank" href="https://storyfile.com/">StoryFile</a> (<a target="_blank" href="https://www.youtube.com/watch?v=X7XsFcVzFm0">video</a>) - 
-      <a target="_blank" href="https://mamasandpapas.ae">Mamas &amp; Papas</a> - 
-      <a target="_blank" href="https://nisnass.ae">Nisnass</a> - 
-      <a target="_blank" href="https://ounass.ae">Ounass</a> - 
-      <a target="_blank" href="https://gap.ae">GAP</a> - 
-      <a target="_blank" href="https://www.kodinglab.com/">KodingLab</a>
+      Examples: <a rel="noopener" target="_blank" href="https://storyfile.com/">StoryFile</a> (<a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=X7XsFcVzFm0">video</a>) - 
+      <a rel="noopener" target="_blank" href="https://mamasandpapas.ae">Mamas &amp; Papas</a> - 
+      <a rel="noopener" target="_blank" href="https://nisnass.ae">Nisnass</a> - 
+      <a rel="noopener" target="_blank" href="https://ounass.ae">Ounass</a> - 
+      <a rel="noopener" target="_blank" href="https://gap.ae">GAP</a> - 
+      <a rel="noopener" target="_blank" href="https://www.kodinglab.com/">KodingLab</a>
     </p>
     <h2>{{ $t('home.listTitle') }}</h2>
     <ul>
@@ -18,13 +18,13 @@
     </ul>
     <h2>I've made this open source</h2>
     <p>
-      I've spent most of my front-end developer life with <a target="_blank" href="https://reactjs.org/">React</a> 
-      and I didn't have much experience with <a target="_blank" href="https://vuejs.org">Vue</a>, so I decided to create 
-      my own personal website with Vue, with <a target="_blank" href="https://ssr.vuejs.org/" title="Server-side Rendering">SSR</a> and all (just trying to do my best). 
+      I've spent most of my front-end developer life with <a rel="noopener" target="_blank" href="https://reactjs.org/">React</a> 
+      and I didn't have much experience with <a rel="noopener" target="_blank" href="https://vuejs.org">Vue</a>, so I decided to create 
+      my own personal website with Vue, with <a rel="noopener" target="_blank" href="https://ssr.vuejs.org/" title="Server-side Rendering">SSR</a> and all (just trying to do my best). 
       and it was really fun :D
     </p>
     <p>
-      Check out it here: <a target="_blank" href="https://github.com/iMagdy/in1t.com">GitHub repo</a>. You're free to reuse it.
+      Check out it here: <a rel="noopener" target="_blank" href="https://github.com/iMagdy/in1t.com">GitHub repo</a>. You're free to reuse it.
     </p>
   </div>
 </template>
