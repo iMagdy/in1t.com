@@ -24,7 +24,7 @@
       and it was really fun :D
     </p>
     <p>
-      Check out GitHub repo here <a target="_blank" href="https://github.com/iMagdy/in1t.com">here</a>. You're free to reuse it.
+      Check out it here: <a target="_blank" href="https://github.com/iMagdy/in1t.com">GitHub repo</a>. You're free to reuse it.
     </p>
   </div>
 </template>

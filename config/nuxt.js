@@ -18,6 +18,7 @@ globalName: pkg.name,
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
+      { name: 'theme-color', content: '#1F5DD3' },
       { name: 'google-site-verification', content: '2EZPuToreFEYFHRd1onOSsFnRK9cfhClVUJLJtAUi8s' }
     ],
     link: [
