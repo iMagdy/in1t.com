@@ -20,6 +20,7 @@
 const { Ignitor } = require('@adonisjs/ignitor')
 const path = require('path')
 const http2 = require('http2')
+const http = require('http')
 const fs = require('fs')
 
 
@@ -34,9 +35,6 @@ new Ignitor(require('@adonisjs/fold'))
         cert: fs.readFileSync(path.join(__dirname, 'certs/localhost.crt'))
       }, handler)
     }
-    return http2.createSecureServer({
-      key: fs.readFileSync(path.join('/etc/letsencrypt/live/in1t.com/privkey.pem')),
-      cert: fs.readFileSync(path.join('/etc/letsencrypt/live/in1t.com/fullchain.pem'))
-    }, handler)
+    return http.createServer(handler)
   })
   .catch(console.error)
