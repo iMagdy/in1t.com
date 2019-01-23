@@ -37,6 +37,6 @@ new Ignitor(require('@adonisjs/fold'))
     if (Env.get('FAKE_SSL')) {
       return http2.createSecureServer(options, handler)
     }
-    return http2.createServer(options, handler)
+    return http2.createServer(handler)
   })
   .catch(console.error)
