@@ -29,13 +29,14 @@ new Ignitor(require('@adonisjs/fold'))
     const Env = use('Env')
     use('App/Controllers/Http/NuxtController')
     if (Env.get('FAKE_SSL')) {
-      // Certificate
-      const options = {
+      return http2.createSecureServer({
         key: fs.readFileSync(path.join(__dirname, 'certs/localhost.key')),
         cert: fs.readFileSync(path.join(__dirname, 'certs/localhost.crt'))
-      }
-      return http2.createSecureServer(options, handler)
+      }, handler)
     }
-    return http2.createServer(handler)
+    return http2.createSecureServer({
+      key: fs.readFileSync(path.join('/etc/letsencrypt/live/in1t.com/privkey.pem')),
+      cert: fs.readFileSync(path.join('/etc/letsencrypt/live/in1t.com/fullchain.pem'))
+    }, handler)
   })
   .catch(console.error)
