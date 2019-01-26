@@ -7,6 +7,7 @@
       <el-col :span="24">
         <img 
           class="avatar" 
+          alt="Islam Magdy"
           srcset="../assets/img/avatar-4.jpeg 320w, ../assets/img/avatar-3.jpeg 480w, ../assets/img/avatar-2.jpeg 800w"
           sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
           src="../assets/img/avatar.jpg" 

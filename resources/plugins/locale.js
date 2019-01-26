@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
+import enLocale from 'element-ui/lib/locale/lang/en'
+import arLocale from 'element-ui/lib/locale/lang/ar'
 
 Vue.use(VueI18n)
 
@@ -8,8 +10,14 @@ export default ({ app, store }) => {
     locale: store.state.locale,
     fallbackLocale: 'en',
     messages: {
-      'en': require('~/locales/en.json'),
-      'ar': require('~/locales/ar.json')
+      'en': {
+        ...require('~/locales/en.json'),
+        ...enLocale
+      },
+      'ar': {
+        ...require('~/locales/ar.json'),
+        ...arLocale
+      }
     }
   })
 
