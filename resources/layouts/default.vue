@@ -22,10 +22,18 @@
         </el-row>
       </el-container>
     </div>
+    <no-ssr>
+      <cookie-law>
+        <div slot="message">
+          We're using cookies to ensure you're getting the best possible experience. <a href="/privacy">Learn more</a>
+        </div>
+      </cookie-law>
+    </no-ssr>
   </div>
 </template>
 
 <script>
+import CookieLaw from 'vue-cookie-law'
 import SideNavigation from '~/components/SideNavigation.vue'
 
 export default {
@@ -39,6 +47,7 @@ export default {
     }
   },
   components: {
+    CookieLaw,
     SideNavigation
   }
 }
