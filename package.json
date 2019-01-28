@@ -2,7 +2,7 @@
   "name": "in1t",
   "version": "1.0.0",
   "description": "Senior Full Stack Developer",
-  "author": "Islam Magdy",
+  "author": "Islam Magdy <i.magdy.m@gmail.com>",
   "private": true,
   "scripts": {
     "serve:dev": "npm run dev",
