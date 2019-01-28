@@ -8,7 +8,7 @@
     "dev": "yarn lint && nodemon --watch app --watch bootstrap --watch config --watch .env --watch start --watch public -x node server.js",
     "build": "yarn lint && node ./ace nuxtbuild",
     "prod": "yarn install && yarn build && cross-env NODE_ENV=production node server.js",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npx eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "yarn run lint"
   },
   "dependencies": {
