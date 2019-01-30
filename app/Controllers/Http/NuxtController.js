@@ -9,14 +9,16 @@ class NuxtController {
     const config = Config.get('nuxt')
     config.dev = Env.get('NODE_ENV') === 'development'
     this.nuxt = new Nuxt(config)
+
     // Start build process (only in development)
     if (config.dev) {
       new Builder(this.nuxt).build()
     }
   }
 
-  async render({request: { request: req }, response: { response: res }}) {
+  async render({ request: { request: req, viewProperties }, response: { response: res }}) {
     await new Promise((resolve, reject) => {
+      req.viewProperties = viewProperties;
       this.nuxt.render(req, res, promise => 
         promise.then(resolve).catch(reject)
       )

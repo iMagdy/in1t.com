@@ -1,7 +1,13 @@
 <template>
   <div>
     <div id="app">
-      <el-container>
+      <el-container v-if="viewProperties.isMobile">
+        <el-main>
+          <MobileNavigation />
+          <nuxt/>
+        </el-main>
+      </el-container>
+      <el-container v-else>
         <el-row>
           <el-col
             :xs="24"
@@ -35,6 +41,7 @@
 <script>
 import CookieLaw from 'vue-cookie-law'
 import SideNavigation from '~/components/SideNavigation.vue'
+import MobileNavigation from '~/components/MobileNavigation.vue'
 
 export default {
   name: 'DefaultLayout',
@@ -48,7 +55,13 @@ export default {
   },
   components: {
     CookieLaw,
-    SideNavigation
-  }
+    SideNavigation,
+    MobileNavigation
+  },
+  data() {
+    return {
+      viewProperties: this.$store.state.viewProperties
+    }
+  },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="resume page">
-    <el-row type="flex" justify="space-between" align="middle" class="page-title">
-      <el-col :span="20" :xs="12">
+    <el-row v-if="!viewProperties.isMobile" type="flex" justify="space-between" align="middle" class="page-title">
+      <el-col :span="20" :xs="24">
         <h1>{{ $t('contact.title') }}</h1>
       </el-col>
       <el-col :span="4" :xs="12">
@@ -15,8 +15,7 @@
     <el-row>
       <p>
         <strong>{{ $t('contact.email') }}: </strong>
-        <a href="mailto:i.magdy.m@gmail.com" @click="usedEmail">i.magdy.m@gmail.com</a> |
-        <a href="mailto:islam@in1t.com" @click="usedEmail">islam@in1t.com</a>
+        <a href="mailto:i.magdy.m@gmail.com" @click="usedEmail">i.magdy.m@gmail.com</a>
       </p>
       <p>
         <strong>{{ $t('contact.github') }}: </strong>
@@ -37,11 +36,16 @@
 <script>
   export default {
     name: 'Contact',
+    data() {
+      return {
+        viewProperties: this.$store.state.viewProperties
+      }
+    },
     methods: {
       usedEmail() {
         dataLayer.push({
-          category: 'Interaction', 
-          action: 'contact', 
+          category: 'ContactPage', 
+          action: 'click', 
           label: 'email', 
           value: 100, 
           event: 'contact_action'
@@ -49,8 +53,8 @@
       },
       usedGithub() {
         dataLayer.push({
-          category: 'Interaction', 
-          action: 'contact', 
+          category: 'ContactPage', 
+          action: 'click', 
           label: 'github', 
           value: 100, 
           event: 'contact_action'
@@ -58,8 +62,8 @@
       },
       usedLinkedIn() {
         dataLayer.push({
-          category: 'Interaction', 
-          action: 'contact', 
+          category: 'ContactPage', 
+          action: 'click', 
           label: 'linkedIn', 
           value: 100, 
           event: 'contact_action'
@@ -67,8 +71,8 @@
       },
       usedPhone() {
         dataLayer.push({
-          category: 'Interaction', 
-          action: 'contact', 
+          category: 'ContactPage', 
+          action: 'click', 
           label: 'phone', 
           value: 100, 
           event: 'contact_action'

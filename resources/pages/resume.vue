@@ -41,7 +41,7 @@
     methods: {
       downloadResume() {
         dataLayer.push({
-          category: 'Interaction', 
+          category: 'Interaction',
           action: 'download', 
           label: 'resume', 
           value: 100, 
