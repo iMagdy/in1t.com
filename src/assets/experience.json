@@ -1,0 +1,92 @@
+[
+  {
+    "company": "VNGRS",
+    "title": "Senior Full Stack Engineer",
+    "meta": "May-2018 to Present — Istanbul, Turkey | Dubai, UAE | Cairo, Egypt",
+    "details": [
+      "At VNGRS, I’m gaining a new experience. VNGRS (based in Turkey) works with clients all over the world, and I’m working with Dubai based clients (Al-Tayer & Majid Al Futtaim). This involves traveling to Dubai every couple of months for few weeks.",
+      "Working with large number of developers from almost every nationality, very diverse.",
+      "Building new features, and maintaining existing on big e-commerce sites like Ounass, Nisnass, GAP, and Mamas and Papas.",
+      "Working 100% remotely except few weeks every couple of months."
+    ]
+  },
+  {
+    "company": "SHEENVALUE",
+    "title": "Technical Lead",
+    "meta": "Feb-2017 to Apr-2018 — Cairo, Egypt",
+    "details": [
+      "Sheenvalue operates under umbrella of Grupo Cognitiva, which is the parent company, with branches in USA, Colombia, and Venezuela.",
+      "Provide technical leadership to teammates through coaching and mentorship.",
+      "Manage a software engineering team that builds, designs, implements and maintains front-ends and back-ends for Sheenvalue's products and services",
+      "Influence and establish best engineering practices through solid design decisions, processes and tools.",
+      "Identify and encourage areas for growth and improvement within the team.",
+      "Collaborate with other software engineers, business analysts and software architects to plan, design, develop, test, and maintain web, desktop, and mobile-based applications.",
+      "Assist in the collection of requirements, development of user stories, estimates and work plans.",
+      "Design, develop, and unit test applications in accordance with established standards.",
+      "Adhere to established engineering standards while delivering solutions on-time and on-budget."
+    ]
+  },
+  {
+    "company": "HATAXI",
+    "title": "Co-Founder & Technical Lead",
+    "meta": "Feb-2016 to Feb-2018 — Cairo, Egypt",
+    "details": [
+      "Built from scratch and developed a the system backend.",
+      "Made multiple successful releases supporting thousands of users, and millions of API requests on a daily basis.",
+      "Technology stack based on NodeJS/MeteorJS and MongoDB.",
+      "High experience with MongoDB geospatial queries to manage locations tracking, finding nearby drivers,.. etc.",
+      "Cooperate on the business requirements, and side of the app."
+    ]
+  },
+  {
+    "company": "SKYKODE",
+    "title": "Technical Lead",
+    "meta": "Aug-2015 to Jan-2017 — Colorado, USA",
+    "details": [
+      "Skykode is an American company, operating a branch in Madinaty, Cairo. My work during all this period was 90% remote from home.",
+      "I’ve focused on company’s primary product (“KodingLab”), targeting computer science education in U.S. colleges, community colleges in particular.",
+      "My role is engineering leadership. Here in Skykode I manage the Software Engineering team, and direct collaborative efforts to meet companies goals in growth and success.",
+      "I bring modern technologies and deliver knowledge to the team members, help everyone develop their skills, write better code, and participate effectively in engineering discussions.",
+      "KodingLab is an educational SaaS, I’ve built it from day one, ground up, and have put the foundation for all system components to be built upon."
+    ]
+  },
+  {
+    "company": "EL-MENUS",
+    "title": "Senior Front End Engineer",
+    "meta": "2016 to 2016 (1-2 months) — Cairo, Egypt",
+    "details": [
+      "Moonlighting with El-Menuns, a very popular online service in Egypt for checking restaurants and menus.",
+      "Build the search module ground up, using AngularJS. "
+    ]
+  },
+  {
+    "company": "MOSTAQQEL",
+    "title": "Senior Front End Engineer",
+    "meta": "May-2014 to Aug-2015 — Cairo, Egypt",
+    "details": [
+      "This is a new experience, working on a product, rather than services (clients) like I used to do most of the time. Now I have more chances to show my full potential in front end development.",
+      "Mostaqqel is Egypt's first Freelancing Platform, I'm responsible for leading the front end development on Mostaqqel, fine tuning the UI interactions, behaviours, and the user experience through cutting end techniques and technologies. Mostaqqel have recently transformed to Worcbox.",
+      "Used modern technologies like Web Components, and sockets."
+    ]
+  },
+  {
+    "company": "NILECODE",
+    "title": "Senior Front End Engineer",
+    "meta": "Jul-2011 to May-2014 — Cairo, Egypt",
+    "details": [
+      "Started as front-end engineer, coming from a full-time freelancing background.",
+      "Responsible for crafting user experience on the websites we create, most of times I build the project ground up, and sometimes I pop up in the middle of a running project and help it outstand.",
+      "Create outstanding User Experiences for the web and mobile apps we create, I've mastered JavaScript in both front and back ends, for creating real-time blazing fast modern apps and building front-end user friendly interactions."
+    ]
+  },
+  {
+    "company": "Self",
+    "title": "Freelancer Front End Engineer",
+    "meta": "2008 to Jul-2011 ",
+    "details": [
+      "Working as a freelancer for clients from Egypt, KSA & USA.",
+      "Worked on small to medium size projects, like BundleHunt, and KodingLab.",
+      "Many other personal experiments."
+    ]
+  }
+]
