@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && docker build . --tag gcr.io/imagdy/in1t:latest",
+    "image-push": "docker push gcr.io/imagdy/in1t:latest",
+    "image-test": "PORT=3000 && docker run -p 3000:${PORT} -e PORT=${PORT} gcr.io/imagdy/in1t",
+    "image-deploy": "gcloud beta run deploy --image gcr.io/imagdy/in1t:latest",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"

@@ -1,4 +1,4 @@
-# in1t-cf
+# in1t.com
 
 ## Project setup
 ```
@@ -7,33 +7,40 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn build
 ```
 
 ### Run your tests
 ```
-yarn run test
+yarn test
 ```
 
 ### Lints and fixes files
 ```
-yarn run lint
+yarn lint
 ```
 
 ### Run your end-to-end tests
 ```
-yarn run test:e2e
+yarn test:e2e
 ```
 
 ### Run your unit tests
 ```
-yarn run test:unit
+yarn test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Push to google container registery
+```
+yarn image-push
+```
+
+### Release to Google Cloud Run
+```
+yarn deploy
+```

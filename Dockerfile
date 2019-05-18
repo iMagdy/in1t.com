@@ -6,4 +6,4 @@ WORKDIR /app
 
 RUN yarn global add http-server
 
-CMD http-server ./ -p 3000 -d false -g --utc --proxy http://0.0.0.0:3000?
+CMD http-server ./ -p ${PORT} -d false -d -g --utc --proxy http://0.0.0.0:${PORT}?
