@@ -1,6 +1,6 @@
 {
-  "name": "in1t-cf",
-  "short_name": "in1t-cf",
+  "name": "in1t",
+  "short_name": "in1t",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

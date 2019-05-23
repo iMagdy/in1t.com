@@ -31,7 +31,7 @@ export default {
       {
         text: 'Home',
         disabled: false,
-        href: '/',
+        to: '/',
       },
       {
         text: 'Highlights',
