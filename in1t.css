@@ -1,0 +1,235 @@
+:root {
+  --bg-light: #F3F3F3;
+  --bg-dark: #1A2732;
+  --color-black: #111;
+  --space: 20px;
+}
+
+/* Resets */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: 'Noto Serif', serif;
+  color: var(--color-black);
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  background: var(--bg-light);
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* App */
+
+/* Layout */
+body > header {
+  display: grid;
+  padding: var(--space);
+  grid-template-columns: 3fr 1fr;
+  border-bottom: 1px solid #C4C4C4;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  padding: var(--space);
+  gap: var(--space);
+}
+
+body > header button {
+  margin-bottom: var(--space);
+}
+
+body {
+  display: grid;
+  margin: var(--space);
+  padding: var(--space);
+  gap: var(--space);
+  background: #fff;
+}
+
+h1 {
+  font-size: 37px;
+  margin-bottom: var(--space);
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: calc(var(--space) / 2);
+}
+
+h3 {
+  font-size: 27px;
+  margin-bottom: calc(var(--space) / 3);
+}
+
+h4 {
+  font-size: 17px;
+  margin-bottom: calc(var(--space) / 4);
+}
+
+h2, h3, h4 { text-transform: uppercase; }
+
+body > header h3 {
+  text-transform: capitalize;
+}
+
+body > header h3 a:not(:last-of-type) {
+  text-transform: lowercase;
+}
+
+small {
+  font-size: 70%;
+}
+
+p, li {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 27px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: var(--space);
+}
+
+button {
+  cursor: pointer;
+  background: #FB6815;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  padding: var(--space);
+  font-size: 17px;
+}
+
+button span {
+  color: #fff;
+}
+
+button[disabled] {
+  cursor: wait;
+  background: #e2e2e2;
+}
+
+.highlighted-box {
+  background: #e2e2e2;
+  padding: var(--space);
+}
+
+section {
+  margin-bottom: var(--space);
+}
+
+.mode-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mode-switch span {
+  cursor: pointer;
+}
+
+.mode-switch span:first-of-type {
+  margin-right: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    color: #fff;
+  }
+  
+  html, body {
+    background: var(--bg-dark);
+  }
+
+  .highlighted-box {
+    background: #111;
+  }
+}
+
+@media print {
+  button {
+    display: none;
+  }
+
+  .highlighted-box {
+    background: transparent;
+    padding: 0;
+  }
+
+  main::after {
+    content: "Check https://in1t.com for the most recent version of my resume";
+  }
+}
