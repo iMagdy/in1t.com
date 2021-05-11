@@ -50,20 +50,20 @@
       
     </div>
     <div>
-      <button disabled id="print">
+      <button onclick="document.getElementById('resume-pdf').contentWindow.print();">
         <span class="material-icons-outlined">print</span> Print
       </button>
-      <button disabled id="pdf">
+      <a class="button" download="Islam-Magdy-Resume" href="/Islam-Magdy-Resume.pdf">
         <span class="material-icons-outlined">picture_as_pdf</span> Download PDF
-      </button>
+      </a>
       
     </div>
   </header>
 
   <main>
     <div class="mode-switch">
-      <span class="material-icons-outlined" title="Switch to dark theme">dark_mode</span>
-      <span class="material-icons-outlined" title="Switch to light theme">light_mode</span>
+      <span onclick="window.document.querySelector('html').setAttribute('dark', '');" class="material-icons-outlined" title="Switch to dark theme">dark_mode</span>
+      <span onclick="window.document.querySelector('html').removeAttribute('dark');" class="material-icons-outlined" title="Switch to light theme">light_mode</span>
     </div>
 
     <section class="highlighted-box">
@@ -231,31 +231,22 @@
       </p>
     </section>
 
+    <iframe src="/Islam-Magdy-Resume.pdf" style="display: none;" id="resume-pdf"></iframe>
 
   </main>
   
-  <!-- <footer>
-    footer
-  </footer> -->
-  
-  
   <script>
     window.addEventListener('load', () => {
-      if ("serviceWorker" in navigator) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        window.document.querySelector('html').setAttribute('dark', '');
+      }
+
+      document.body.setAttribute('loaded', '');
+
+      if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/worker.js');
       }
     });
-    
-    const printButton = document.getElementById('print');
-    const pdfButton = document.getElementById('pdf');
-    
-    printButton.removeAttribute('disabled');
-    pdfButton.removeAttribute('disabled');
-    
-    printButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.print();
-    })
   </script>
 </body>
 

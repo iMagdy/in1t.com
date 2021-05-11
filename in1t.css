@@ -2,23 +2,22 @@
   --bg-light: #F3F3F3;
   --bg-dark: #1A2732;
   --color-black: #111;
+  --color-highlight: #e2e2e2;
   --space: 20px;
 }
 
+body {
+  opacity: 0;
+  transition: 0.5s ease-in opacity;
+}
+
+body[loaded] {
+  opacity: 1;
+}
+
 /* Resets */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, 
+small, strong, ol, ul, li, article, footer, header, nav {
   font-family: 'Noto Serif', serif;
   color: var(--color-black);
 	margin: 0;
@@ -91,7 +90,8 @@ main {
   gap: var(--space);
 }
 
-body > header button {
+body > header button,
+body > header a.button {
   margin-bottom: var(--space);
 }
 
@@ -116,14 +116,16 @@ h2 {
 h3 {
   font-size: 27px;
   margin-bottom: calc(var(--space) / 3);
+  text-transform: capitalize;
 }
 
 h4 {
   font-size: 17px;
   margin-bottom: calc(var(--space) / 4);
+  text-transform: capitalize;
 }
 
-h2, h3, h4 { text-transform: uppercase; }
+h2 { text-transform: uppercase; }
 
 body > header h3 {
   text-transform: capitalize;
@@ -148,7 +150,7 @@ ul {
   margin-left: var(--space);
 }
 
-button {
+button, a.button {
   cursor: pointer;
   background: #FB6815;
   color: #fff;
@@ -161,17 +163,18 @@ button {
   font-size: 17px;
 }
 
-button span {
+a.button {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+button span,
+a.button span {
   color: #fff;
 }
 
-button[disabled] {
-  cursor: wait;
-  background: #e2e2e2;
-}
-
 .highlighted-box {
-  background: #e2e2e2;
+  background: var(--color-highlight);
   padding: var(--space);
 }
 
@@ -193,20 +196,10 @@ section {
   margin-right: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+/* @media (prefers-color-scheme: dark) {
+  html, body, div, span, h1, h2, h3, 
+  h4, h5, h6, p, a, small, strong,
+  ol, ul, li, article, footer, header, nav {
     color: #fff;
   }
   
@@ -215,12 +208,31 @@ section {
   }
 
   .highlighted-box {
-    background: #111;
+    background: var(--color-black);
   }
-}
+} */
+
+/* Dark for color switch */
+  [dark] html, [dark] body, [dark] div, [dark] span, [dark] h1, [dark] h2, [dark] h3, 
+  [dark] h4, [dark] h5, [dark] h6, [dark] p, [dark] a, [dark] small, [dark] strong,
+  [dark] ol, [dark] ul, [dark] li, [dark] article, [dark] footer, [dark] header, [dark] nav {
+    color: #fff;
+  }
+  
+  [dark], [dark] body {
+    background: var(--bg-dark);
+  }
+
+  [dark] .highlighted-box {
+    background: var(--color-black);
+  }
 
 @media print {
-  button {
+  section, ul {
+    break-inside: avoid;
+  }
+  
+  button, a.button, .mode-switch {
     display: none;
   }
 
@@ -232,4 +244,39 @@ section {
   main::after {
     content: "Check https://in1t.com for the most recent version of my resume";
   }
+}
+
+
+@media screen and (max-width: 720px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body > header {
+    grid-template-columns: 1fr;
+    gap: var(--space);
+  }
+  
+  body > header div:last-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space);
+  }
+
+  h1 { font-size: 27px; }
+
+  h2 { font-size: 22px; }
+
+  h3 { font-size: 21px; }
+
+  h4 { font-size: 17px; }
+
+  button, a.button {
+    max-height: 47px;
+    justify-content: start;
+  }
+
+  button span, a.button span { margin-right: 7px; }
+
+  
 }
