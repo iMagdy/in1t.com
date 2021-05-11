@@ -196,6 +196,11 @@ section {
   margin-right: 10px;
 }
 
+.current-job {
+  border-left: 3px solid green;
+  padding-left: var(--space);
+}
+
 /* @media (prefers-color-scheme: dark) {
   html, body, div, span, h1, h2, h3, 
   h4, h5, h6, p, a, small, strong,
