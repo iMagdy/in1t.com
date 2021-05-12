@@ -1,4 +1,4 @@
-const OFFLINE_VERSION = 11052021;
+const OFFLINE_VERSION = 12052021;
 const CACHE_NAME = 'offline';
 const OFFLINE_URL = '/offline.html';
 const STYLESHEET = '/in1t.css';
