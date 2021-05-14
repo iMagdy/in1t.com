@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "snowpack": "^3.3.7"
+  },
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
   }
 }

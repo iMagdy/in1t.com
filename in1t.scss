@@ -1,30 +1,26 @@
 :root {
-  --bg-light: #F3F3F3;
-  --bg-dark: #1A2732;
-  --color-black: #111;
-  --color-highlight: #e2e2e2;
-  --space: 20px;
+  --bg-light:#F3F3F3;
+  --bg-dark:#141323;
+  --color-black:#111;
+  --color-highlight:#e2e2e2;
+  --color-purple:#a1334f;
+  --space:20px;
+  --color--light-red:#d73a49;
+  --color--light-blue:#005cc5;
 }
 
 /* Resets */
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, 
-small, strong, ol, ul, li, article, footer, header, nav {
-  font-family: 'Noto Serif', serif;
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, small, strong, ol, ul, li, article, footer, header, nav {
+  font-family: 'Courier Prime', monospace;
   color: var(--color-black);
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -33,9 +29,7 @@ ul {
   list-style: none;
 }
 
-button,
-input,
-select {
+button, input, select {
   margin: 0;
 }
 
@@ -44,8 +38,7 @@ html {
   background: var(--bg-light);
 }
 
-img,
-video {
+img, video {
   height: auto;
   max-width: 100%;
 }
@@ -59,29 +52,30 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
+td, th {
   padding: 0;
 }
 
 /* App */
+
 body {
   opacity: 0;
   transition: 0.5s ease-in opacity;
-}
 
-body[loaded] {
-  opacity: 1;
+  &[loaded] {
+    opacity: 1;
+  }
+
+  > header {
+    display: grid;
+    padding: var(--space);
+    grid-template-columns: 3fr 1fr;
+    border-bottom: 1px solid #C4C4C4;
+    align-items: start;
+  }
 }
 
 /* Layout */
-body > header {
-  display: grid;
-  padding: var(--space);
-  grid-template-columns: 3fr 1fr;
-  border-bottom: 1px solid #C4C4C4;
-  align-items: center;
-}
 
 main {
   display: grid;
@@ -89,16 +83,10 @@ main {
   gap: var(--space);
 }
 
-body > header button,
-body > header a.button {
-  margin-bottom: var(--space);
-}
-
 body {
   display: grid;
   margin: var(--space) auto;
-  max-width: 1500px;
-  margin: 0 auto;
+  max-width: 1250px;
   padding: var(--space);
   gap: var(--space);
   background: #fff;
@@ -126,14 +114,16 @@ h4 {
   text-transform: capitalize;
 }
 
-h2 { text-transform: uppercase; }
+h2 {
+  text-transform: uppercase;
+}
 
 body > header h3 {
   text-transform: capitalize;
-}
 
-body > header h3 a:not(:last-of-type) {
-  text-transform: lowercase;
+  a:not(:last-of-type) {
+    text-transform: lowercase;
+  }
 }
 
 small {
@@ -141,7 +131,6 @@ small {
 }
 
 p, li {
-  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
   font-size: 17px;
   line-height: 27px;
 }
@@ -151,27 +140,45 @@ ul {
   margin-left: var(--space);
 }
 
+.buttons {
+  display: grid;
+  gap: calc(var(--space) / 2);
+}
+
 button, a.button {
   cursor: pointer;
-  background: #FB6815;
-  color: #fff;
+  background: transparent;
+  color: green;
+  border: 1px solid green;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border: 0;
-  padding: var(--space);
+  padding: calc(var(--space) / 2);
   font-size: 17px;
 }
 
+button:hover {
+  background: green;
+  color: white;
+}
+
 a.button {
+  &:hover {
+    background: green;
+    color: white;
+  }
+
   text-decoration: none;
   box-sizing: border-box;
 }
 
-button span,
-a.button span {
-  color: #fff;
+button span, a.button span {
+  color: green;
+}
+
+button:hover span, a.button:hover span {
+  color: white;
 }
 
 .highlighted-box {
@@ -187,14 +194,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
 
-.mode-switch span {
-  cursor: pointer;
-}
+  span {
+    cursor: pointer;
 
-.mode-switch span:first-of-type {
-  margin-right: 10px;
+    &:first-of-type {
+      margin-right: 10px;
+    }
+  }
 }
 
 .current-job {
@@ -206,18 +213,21 @@ section {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+
   /* grid-template-rows: repeat(auto-fit, minmax(150px, 300px)); */
   gap: var(--space);
   margin: var(--space) 0;
-}
-.previews a {
-  padding: var(--space);
-  border-radius: 7px;
-  height: 150px;
-  border: 3px solid transparent;
-}
-.previews a:hover {
-  border: 3px solid #fb6815;
+
+  a {
+    padding: var(--space);
+    border-radius: 7px;
+    height: 150px;
+    border: 3px solid transparent;
+
+    &:hover {
+      border: 3px solid #fb6815;
+    }
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -237,25 +247,46 @@ section {
 } */
 
 /* Dark for color switch */
-  [dark] html, [dark] body, [dark] div, [dark] span, [dark] h1, [dark] h2, [dark] h3, 
-  [dark] h4, [dark] h5, [dark] h6, [dark] p, [dark] a, [dark] small, [dark] strong,
-  [dark] ol, [dark] ul, [dark] li, [dark] article, [dark] footer, [dark] header, [dark] nav {
+
+[dark] {
+  html, body, div, h1, h2, h3, h4, h5, h6, p, a, small, strong, ol, ul, li, article, footer, header, nav {
     color: #fff;
   }
-  
-  [dark], [dark] body {
+
+  background: var(--bg-dark);
+
+  body {
     background: var(--bg-dark);
   }
 
-  [dark] .highlighted-box {
+  .highlighted-box {
     background: var(--color-black);
   }
+
+  button, a.button {
+    border-color: var(--color-purple);
+    color: var(--color-purple);
+  }
+
+  button span, a.button span {
+    color: var(--color-purple);
+  }
+
+  button:hover, a.button:hover {
+    background: var(--color-purple);
+    color: white;
+  }
+
+  button:hover span, a.button:hover span {
+    color: white;
+  }
+}
 
 @media print {
   section, ul {
     break-inside: avoid;
   }
-  
+
   button, a.button, .mode-switch {
     display: none;
   }
@@ -270,37 +301,50 @@ section {
   }
 }
 
-
 @media screen and (max-width: 720px) {
   body {
     margin: 0;
     padding: 0;
+
+    > header {
+      grid-template-columns: 1fr;
+      gap: var(--space);
+
+      div:last-of-type {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space);
+      }
+    }
   }
-  body > header {
-    grid-template-columns: 1fr;
-    gap: var(--space);
-  }
-  
-  body > header div:last-of-type {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space);
+
+  h1 {
+    font-size: 27px;
   }
 
-  h1 { font-size: 27px; }
+  h2 {
+    font-size: 22px;
+  }
 
-  h2 { font-size: 22px; }
+  h3 {
+    font-size: 21px;
+  }
 
-  h3 { font-size: 21px; }
-
-  h4 { font-size: 17px; }
+  h4 {
+    font-size: 13px;
+  }
 
   button, a.button {
     max-height: 47px;
     justify-content: start;
+    font-size: 16px;
   }
 
-  button span, a.button span { margin-right: 7px; }
+  button span, a.button span {
+    margin-right: 7px;
+  }
 
-  
+  p, li {
+    font-size: 15px;
+  }
 }
