@@ -280,6 +280,10 @@ section {
   button:hover span, a.button:hover span {
     color: white;
   }
+
+  .mode-switch span {
+    color: #fff;
+  }
 }
 
 @media print {
