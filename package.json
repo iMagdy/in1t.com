@@ -1,6 +1,6 @@
 {
   "name": "in1t.com",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "snowpack": "^3.3.7"
+  },
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
   }
 }
