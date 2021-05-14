@@ -33,7 +33,8 @@
 
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
   <link rel="stylesheet" href="/in1t.css">
@@ -54,6 +55,20 @@
       </ul>
     </section>
   </main>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        window.document.querySelector('html').setAttribute('dark', '');
+      }
+
+      document.body.setAttribute('loaded', '');
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/worker.js');
+      }
+    });
+  </script>
 </body>
 
 </html>
