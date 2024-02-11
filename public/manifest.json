@@ -1,0 +1,43 @@
+{
+  "short_name": "Islam Magdy",
+  "name": "Islam Magdy - Senior Full Stack Developer",
+  "icons": [
+    {
+      "src": "/images/icons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#1A2732",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1A2732",
+  "shortcuts": [
+    {
+      "name": "Save as PDF",
+      "short_name": "PDF",
+      "description": "Download the resume as PDF",
+      "url": "/Islam-Magdy-Resume.pdf",
+      "icons": [{ "src": "/images/icons/pdf/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "description": "Hi, this is Islam Magdy's resume, a senior full stack javascript developer with near 10 years experience",
+  "screenshots": [
+    {
+      "src": "/images/screenshot-light.png",
+      "type": "image/png",
+      "sizes": "1125x2436"
+    },
+    {
+      "src": "/images/screenshot-dark.png",
+      "type": "image/png",
+      "sizes": "1125x2436"
+    }
+  ]
+}

@@ -1,0 +1,675 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Hi, this is Islam Magdy's resume, a senior full stack javascript developer with near 10 years experience"
+    />
+
+    <meta
+      property="og:title"
+      content="Islam Magdy - Senior Full Stack Developer"
+    />
+    <meta property="og:url" content="https://in1t.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Hi, this is Islam Magdy's resume, a senior full stack javascript developer with near 10 years experience"
+    />
+    <meta
+      property="og:image"
+      content="http://in1t.com/images/icons/android-chrome-512x512.png"
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Islam Magdy - Senior Full Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Hi, this is Islam Magdy's resume, a senior full stack javascript developer with near 10 years experience"
+    />
+    <meta name="twitter:url" content="https://in1t.com" />
+    <meta
+      name="twitter:image"
+      content="http://in1t.com/images/icons/android-chrome-512x512.png"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="/images/icons/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="/images/icons/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="/images/icons/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="/images/icons/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="/images/icons/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="/images/icons/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="/images/icons/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="/images/icons/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/icons/favicon-196x196.png"
+      sizes="196x196"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/icons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/icons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/icons/favicon-128.png"
+      sizes="128x128"
+    />
+    <meta name="application-name" content="Islam Magdy Full Stack" />
+    <meta name="msapplication-TileColor" content="#1A2732" />
+    <meta
+      name="msapplication-TileImage"
+      content="/images/icons/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-square70x70logo"
+      content="/images/icons/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="/images/icons/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="/images/icons/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="/images/icons/mstile-310x310.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://in1t.com",
+          "logo": "http://in1t.com/images/icons/android-chrome-512x512.png"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Islam Magdy - Senior Full Stack Developer",
+          "operatingSystem": "WEB",
+          "applicationCategory": "DeveloperApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@context": "https://schema.org/",
+          "@type": "WebPage",
+          "name": "Islam Magdy - Senior Full Stack Developer",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "xpath": [
+              "/html/head/title",
+              "/html/head/meta[@name='description']/@content"
+            ]
+          },
+          "url": "https://in1t.com"
+        }
+      ]
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-44383953-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-44383953-6");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Islam Magdy Mahmoud</h1>
+        <h3>
+          Senior Full Stack Developer <br />
+          <small>
+            <a href="mailto:i.magdy.m@gmail.com">i.magdy.m@gmail.com</a> -
+            <a href="tel:+31658715620">(+31) 658 715 620</a> -
+            <a href="http://linkedin.com/in/imagdy">LinkedIn</a>
+          </small>
+        </h3>
+      </div>
+      <div class="buttons">
+        <button
+          onclick="document.getElementById('resume-pdf').contentWindow.print();"
+        >
+          <span class="material-icons-outlined">print</span> Print
+        </button>
+
+        <a
+          class="button"
+          download="Islam-Magdy-Resume"
+          href="/Islam-Magdy-Resume.pdf"
+        >
+          <span class="material-icons-outlined">download</span> Download PDF
+        </a>
+
+        <a class="button" href="https://devspedia.com/">
+          <span class="material-icons-outlined">code</span> Devspedia
+        </a>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer>Last updated May 14th, 2021</footer>
+    <script>
+      window.addEventListener("load", () => {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          window.document.querySelector("html").setAttribute("dark", "");
+        }
+
+        document.body.setAttribute("loaded", "");
+
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/worker.js");
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg-light: #f3f3f3;
+    --bg-dark: #141323;
+    --color-black: #111;
+    --color-highlight: #e2e2e2;
+    --color-purple: #a1334f;
+    --space: 20px;
+    --color--light-red: #d73a49;
+    --color--light-blue: #005cc5;
+  }
+
+  /* Resets */
+  html,
+  body,
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  small,
+  strong,
+  ol,
+  ul,
+  li,
+  article,
+  footer,
+  header,
+  nav {
+    font-family: "Courier Prime", monospace;
+    color: var(--color-black);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button,
+  input,
+  select {
+    margin: 0;
+  }
+
+  html {
+    box-sizing: border-box;
+    background: var(--bg-light);
+  }
+
+  img,
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+
+  iframe {
+    border: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  td,
+  th {
+    padding: 0;
+  }
+
+  /* App */
+
+  body {
+    opacity: 0;
+    transition: 0.5s ease-in opacity;
+
+    &[loaded] {
+      opacity: 1;
+    }
+
+    > header {
+      display: grid;
+      padding: var(--space);
+      grid-template-columns: 3fr 1fr;
+      border-bottom: 1px solid #c4c4c4;
+      align-items: start;
+    }
+  }
+
+  /* Layout */
+
+  main {
+    display: grid;
+    padding: var(--space);
+    gap: var(--space);
+  }
+
+  body {
+    display: grid;
+    margin: var(--space) auto;
+    max-width: 1250px;
+    padding: var(--space);
+    gap: var(--space);
+    background: #fff;
+  }
+
+  h1 {
+    font-size: 37px;
+    margin-bottom: var(--space);
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: calc(var(--space) / 2);
+  }
+
+  h3 {
+    font-size: 27px;
+    margin-bottom: calc(var(--space) / 3);
+    text-transform: capitalize;
+  }
+
+  h4 {
+    font-size: 17px;
+    margin-bottom: calc(var(--space) / 4);
+    text-transform: capitalize;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  body > header h3 {
+    text-transform: capitalize;
+
+    a:not(:last-of-type) {
+      text-transform: lowercase;
+    }
+  }
+
+  small {
+    font-size: 70%;
+  }
+
+  p,
+  li {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: var(--space);
+  }
+
+  .buttons {
+    display: grid;
+    gap: calc(var(--space) / 2);
+  }
+
+  button,
+  a.button {
+    cursor: pointer;
+    background: transparent;
+    color: green;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: calc(var(--space) / 2);
+    font-size: 17px;
+  }
+
+  button:hover {
+    background: green;
+    color: white;
+  }
+
+  a.button {
+    &:hover {
+      background: green;
+      color: white;
+    }
+
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  button span,
+  a.button span {
+    color: green;
+  }
+
+  button:hover span,
+  a.button:hover span {
+    color: white;
+  }
+
+  .highlighted-box {
+    background: var(--color-highlight);
+    padding: var(--space);
+  }
+
+  section {
+    margin-bottom: var(--space);
+  }
+
+  .mode-switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    span {
+      cursor: pointer;
+
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .current-job {
+    border-left: 3px solid green;
+    padding-left: var(--space);
+  }
+
+  .previews {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+
+    /* grid-template-rows: repeat(auto-fit, minmax(150px, 300px)); */
+    gap: var(--space);
+    margin: var(--space) 0;
+
+    a {
+      padding: var(--space);
+      border-radius: 7px;
+      height: 150px;
+      border: 3px solid transparent;
+
+      &:hover {
+        border: 3px solid #fb6815;
+      }
+    }
+  }
+
+  /* @media (prefers-color-scheme: dark) {
+  html, body, div, span, h1, h2, h3, 
+  h4, h5, h6, p, a, small, strong,
+  ol, ul, li, article, footer, header, nav {
+    color: #fff;
+  }
+  
+  html, body {
+    background: var(--bg-dark);
+  }
+
+  .highlighted-box {
+    background: var(--color-black);
+  }
+} */
+
+  /* Dark for color switch */
+
+  [dark] {
+    html,
+    body,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    small,
+    strong,
+    ol,
+    ul,
+    li,
+    article,
+    footer,
+    header,
+    nav {
+      color: #fff;
+    }
+
+    background: var(--bg-dark);
+
+    body {
+      background: var(--bg-dark);
+    }
+
+    .highlighted-box {
+      background: var(--color-black);
+    }
+
+    button,
+    a.button {
+      border-color: var(--color-purple);
+      color: var(--color-purple);
+    }
+
+    button span,
+    a.button span {
+      color: var(--color-purple);
+    }
+
+    button:hover,
+    a.button:hover {
+      background: var(--color-purple);
+      color: white;
+    }
+
+    button:hover span,
+    a.button:hover span {
+      color: white;
+    }
+
+    .mode-switch span {
+      color: #fff;
+    }
+  }
+
+  @media print {
+    section,
+    ul {
+      break-inside: avoid;
+    }
+
+    button,
+    a.button,
+    .mode-switch {
+      display: none;
+    }
+
+    .highlighted-box {
+      background: transparent;
+      padding: 0;
+    }
+
+    main::after {
+      content: "Check https://in1t.com for the most recent version of my resume";
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    body {
+      margin: 0;
+      padding: 0;
+
+      > header {
+        grid-template-columns: 1fr;
+        gap: var(--space);
+
+        div:last-of-type {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: var(--space);
+        }
+      }
+    }
+
+    h1 {
+      font-size: 27px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 21px;
+    }
+
+    h4 {
+      font-size: 13px;
+    }
+
+    button,
+    a.button {
+      max-height: 47px;
+      justify-content: start;
+      font-size: 16px;
+    }
+
+    button span,
+    a.button span {
+      margin-right: 7px;
+    }
+
+    p,
+    li {
+      font-size: 15px;
+    }
+  }
+</style>
