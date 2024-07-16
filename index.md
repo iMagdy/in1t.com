@@ -22,14 +22,42 @@ I excel at architecting and scaling distributed systems, whether it's microservi
 <section class="current-job">
   <article>
     <header>
-      <h4>Dec-2021 to present — Rotterdam, The Netherlands</h4>
-      <h3>NN Group — Senior Software Engineer</h3>
+      <h4>Jul-2022 to present — Rotterdam, The Netherlands</h4>
+      <h3>Nationale-Nederlanden — Tech Lead</h3>
     </header>
     
     <p>
-      I've moved to the Netherlands to join Nationale Nederlanden's innovation team. I'm working as a senior full stack
-      developer, helping my company innovate smart, time-saving apps and tools to boost experiences for our customers,
-      employees, and even third parties that are integrating with our solutions.
+      In my current role as Tech Lead at Nationale-Nederlanden, I have the honor of steering a team of adept software engineers, customer journey experts, and UX designers. Our mission is to revolutionize the mortgage loan sector through technological innovation. We employ the SJGAR stack—Serverless Framework, JavaScript, GraphQL, AWS, and React—as our Digital Product Tech Stack (DPTS) for the majority of our applications.
+    </p>
+
+    <br />
+
+    <p>
+      Since assuming this leadership position in July 2022, my team and I have been dedicated to automating and streamlining processes for our clients and advisors. Our primary objectives include:
+    </p>
+
+    <br />
+
+    <ul>
+      <li><strong>Automating Loan Repayment:</strong> Implementing comprehensive solutions for full and indicative loan repayment processes, and facilitating second mortgage loan requests.</li>
+
+      <li><strong>Legacy System Migration:</strong> Transitioning legacy components, previously built with Java among other technologies, to our modern SJGAR stack, ensuring scalability and adaptability for future needs.</li>
+
+      My responsibilities encompass:
+
+      <li><strong>Strategic Leadership:</strong> Providing technical direction and fostering a culture of excellence and continuous improvement within my team.</li>
+
+      <li><strong>Cross-Team Collaboration:</strong> Working alongside other tech leads to enhance the technological landscape within the mortgage domain, sharing best practices, and optimizing our collective offerings.</li>
+
+      <li><strong>Innovation Management:</strong> Driving the development of cutting-edge solutions to automate client processes, thereby enhancing efficiency and advisor productivity.</li>
+
+      <li><strong>Technical Decision-Making:</strong> Leveraging my technical acumen to make informed decisions and effectively communicate with stakeholders across the board.</li>
+    </ul>
+
+    <br />
+
+    <p>
+      I am deeply committed to nurturing a culture of innovation and excellence at Nationale-Nederlanden, and I eagerly anticipate continuing to propel our success and technological advancement.
     </p>
 
     <div class="previews">
@@ -37,7 +65,36 @@ I excel at architecting and scaling distributed systems, whether it's microservi
     </div>
 
   </article>
+
+  <article>
+    <header>
+      <h4>Dec-2021 to Jul-2022 — Rotterdam, The Netherlands</h4>
+      <h3>Nationale-Nederlanden — Senior Full Stack Engineer</h3>
+    </header>
+    
+    <p>
+      In my role as a Senior Full Stack Engineer at Nationale-Nederlanden, I specialized in the development of innovative repayment tools and applications designed to empower mortgage clients with the ability to manage and gain insights into their mortgages. My responsibilities included:
+    </p>
+
+    <br />
+
+    <ul>
+      <li><strong>Developing Full Stack Solutions:</strong> Architecting and implementing full-stack features with a focus on performance, scalability, user experience and resilience.</li>
+
+      <li><strong>Technology Integration:</strong> Seamlessly integrating a diverse stack of Node.js & AWS technologies to deliver comprehensive solutions.</li>
+
+      <li><strong>Collaborative Development:</strong> Working closely with cross-functional teams to ensure cohesive product development and deployment.</li>
+
+      <li><strong>Client-Centric Design:</strong> Tailoring applications to meet the specific needs of mortgage clients, enhancing their ability to make informed financial decisions.</li>
+    </ul>
+
+    <div class="previews">
+      <a target="_blank" href="https://www.nn.nl/" style="background: #fff center / contain no-repeat url(/images/nn.png); background-size: 70%;"></a>
+    </div>
+
+  </article>
 </section>
+
 
 <section>
   <article>
