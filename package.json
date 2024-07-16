@@ -1,0 +1,16 @@
+{
+  "name": "in1t.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "sass": "^1.77.8"
+  }
+}
