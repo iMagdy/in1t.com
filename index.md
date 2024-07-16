@@ -188,6 +188,7 @@ I excel at architecting and scaling distributed systems, whether it's microservi
     </ul>
   </article>
 </section>
+
 <section>
   <h2>Projects</h2>
   <p>
@@ -195,3 +196,6 @@ I excel at architecting and scaling distributed systems, whether it's microservi
   </p>
 </section>
 
+---
+
+Last updated: {{ page.date }}

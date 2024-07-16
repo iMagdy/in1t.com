@@ -1,5 +1,6 @@
 ---
 title: Islam Magdy - Senior Full Stack Developer
+date: git Last Modified
 ---
 
 <!DOCTYPE html>
@@ -156,7 +157,7 @@ title: Islam Magdy - Senior Full Stack Developer
     </main>
 
     <footer>
-        Last updated {{ date }}
+        {# Last updated: {{ page.date.toUTCString() }} #}
     </footer>
 
     <script>
@@ -164,8 +165,6 @@ title: Islam Magdy - Senior Full Stack Developer
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             window.document.querySelector('html').setAttribute('dark', '');
         }
-
-        document.body.setAttribute('loaded', '');
 
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/worker.js');

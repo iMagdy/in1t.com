@@ -1,6 +1,10 @@
 const sass = require("sass");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({
+    'public': '/'
+  });
+  
   eleventyConfig.addTemplateFormats("scss");
 
   // Creates the extension for use
