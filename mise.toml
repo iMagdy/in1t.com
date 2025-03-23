@@ -1,0 +1,11 @@
+[tools]
+node = 'latest'
+
+[hooks]
+postinstall = 'npx corepack enable'
+
+[tasks.pnpm-install]
+description = 'Installs dependencies with pnpm'
+run = 'pnpm install'
+sources = ['package.json', 'pnpm-lock.yaml', 'mise.toml']
+outputs = ['node_modules/.pnpm/lock.yaml']
