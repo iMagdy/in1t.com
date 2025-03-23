@@ -1,11 +1,40 @@
 [tools]
 node = 'latest'
 
-[hooks]
-postinstall = 'npx corepack enable'
+
+[env]
+_.path = ['./node_modules/.bin']
+
+[tasks.setup]
+description = 'Sets up the project'
+run = 'corepack enable pnpm'
+env = { COREPACK_ENABLE_DOWNLOAD_PROMPT = '0' }
 
 [tasks.pnpm-install]
+depends = "setup"
 description = 'Installs dependencies with pnpm'
 run = 'pnpm install'
 sources = ['package.json', 'pnpm-lock.yaml', 'mise.toml']
 outputs = ['node_modules/.pnpm/lock.yaml']
+
+[tasks.pnpm-install-ci]
+depends = "setup"
+description = 'Installs dependencies with pnpm'
+run = 'pnpm install --frozen-lockfile'
+sources = ['package.json', 'pnpm-lock.yaml', 'mise.toml']
+outputs = ['node_modules/.pnpm/lock.yaml']
+
+[tasks.serve]
+depends = "pnpm-install"
+description = 'Starts the development server'
+run = 'pnpm exec eleventy --serve'
+
+[tasks.build]
+depends = "pnpm-install"
+description = 'Builds the project'
+run = 'pnpm exec eleventy --output=build'
+
+[tasks.release]
+depends = "pnpm-install-ci"
+description = 'Builds for release'
+run = 'pnpm exec eleventy --output=build'
