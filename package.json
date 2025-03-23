@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy --output=build"
+    "start": "mise serve",
+    "build": "mise build"
   },
   "keywords": [],
   "author": "",
