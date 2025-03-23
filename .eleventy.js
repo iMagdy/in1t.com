@@ -1,22 +1,27 @@
 const sass = require("sass");
 
 module.exports = function (eleventyConfig) {
+  // Copy the contents of the 'public' directory to the output directory
   eleventyConfig.addPassthroughCopy({
     'public': '/'
   });
-  
+
+  // Add Sass (SCSS) as a supported template format in Eleventy
   eleventyConfig.addTemplateFormats("scss");
 
-  // Creates the extension for use
+  // Register a new extension for Sass (SCSS) files
   eleventyConfig.addExtension("scss", {
-    outputFileExtension: "css", // optional, default: "html"
+    // Set the output file extension for compiled Sass files to 'css'
+    outputFileExtension: "css", 
 
-    // `compile` is called once per .scss file in the input directory
+    // The 'compile' function is called once for each .scss file in the input directory
     compile: async function (inputContent) {
+      // Compile the Sass code using the 'sass.compileString' function
       let result = sass.compileString(inputContent);
 
-      // This is the render function, `data` is the full data cascade
+      // Return a render function that will be called during the build process
       return async (data) => {
+        // Return the compiled CSS code
         return result.css;
       };
     },
